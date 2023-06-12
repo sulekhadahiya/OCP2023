@@ -3,7 +3,7 @@
 
     AGGREGATION: An association defines a static relationship between objects of two classes.
         One such association, called aggregation (also known as composition), expresses how an object uses other objects.
-
+        Java supports aggregation of objects by references, since objects cannot contain other objects explicitly.
  */
 
 public class Point3D extends Point2D{

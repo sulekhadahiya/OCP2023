@@ -47,11 +47,37 @@ A reference value is returned when an object is created.
 A reference value uniquely denotes a particular object.
 A variable denotes a location in memory where a value can be stored.
 
+PROGRAM :-
+
+Term program(application - used synonymously) refers to source code that is compiled and directly executed.
+To create a program in java, the program must have a class that defines a method named main, which is
+invoked at runtime to start the execution of the program. The class with this main method is called the
+"entry point of the program".
+
+COMPILING A PROGRAM :-
+
+JDK provides tools for compiling and running programs.
+The classes in the Java SE Platform API are already compiled, and the JDK tools know where to find them.
+Java source files can be compiled using the Java Language Compiler, javac,which is part of the JDK.
+Each source file name has the extension .java. Each class declaration in a source file is compiled into
+a separate class file, containing its java bytecode. The name of this file comprises the name of the class
+with .class as its extension.
+
+RUNNING A PROGRAM :-
+
+It is the bytecode in the class file that is executed when a java program is run-the source code is immaterial in this regard.
+A java program is run by the Java Application Launcher, java, which is also part of the JDK.
+The java command creates an instance of the jvm that executes the bytecode.
  */
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    public static void main(String[] args) {  // Method header  - public-accessible from any class
+        // - static-means the method belongs to the class.
+        // - void-indicates that the method does not return any value.
+        // - parameter args is an array of strings that can be used to pass information to the main() method when execution starts.
+
+
+        System.out.println("Hello world!");  // Object of the class java.io.PrintStream
 
         Point2D point2D =  new Point2D(2,3); // A point with coordinates (10, 20)
 
@@ -80,8 +106,19 @@ public class Main {
         point3D.setZ(-30);
         System.out.println(point3D.toString());
 
+        Line line1 = new Line(new Point2D(5,6), new Point2D(7,8));
+        System.out.println(line1.toString());
+        line1.setEndPoint1(new Point2D(11, 12));
+        line1.setEndPoint2(new Point2D(13, 14));
+        System.out.println(line1.toString());
+        System.out.println("Length: " + line1.length());
 
+        System.out.printf("Formatted values |%5d|%8.3f|%5s|%n", 2016, Math.PI, "Hi");
+        System.out.printf("Formatted values |%3d|%4.2f|%2s|%n", 2016, Math.PI, "Hi");
 
+        // c , b , 2 , b and e , d , c , d and f.   (1.1 to 1.7)
+
+        // d , a , a and d , a. (1.8 to 1.11)
         
     }
 }
