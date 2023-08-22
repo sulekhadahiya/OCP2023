@@ -22,6 +22,16 @@ package ch2;
                in the program. Literal represent numerical (integer and floating-point), character, boolean, and
                string values. In addition, the literal null represents the null reference.
 
+    Decimal Numbers : Decimal number system is also "Base 10", because it's based on the number 10, with these 10 symbols:
+                0,1,2,3,4,5,6,7,8 and 9 but notice there is no symbol for 10. 10 is actually two symbols put together,
+                a "1" and a "0":
+
+    Binary Numbers : are just "Base 2" instead of "Base 10".
+
+    Hexadecimal Numbers : There are 16 of them 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+
+    
+
 
  */
 public class JavaIdentifiers {
